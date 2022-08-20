@@ -44,7 +44,7 @@
     marker: "# {mark} SFTP-Server {{ sftp_group_name }} block"
     block: |
       Match Group {{ sftp_group_name }}
-          ChrootDirectory {{ sftp_expose_dir | default(%h) }}
+          ChrootDirectory {{ sftp_expose_dir }}
           AllowTCPForwarding no
           PermitTunnel no
           X11Forwarding no
